@@ -1,0 +1,14 @@
+# Requirements for Bilingual Book Translator CLI
+# Install with: pip install -r requirements.txt
+
+# ePub reading and writing
+ebooklib>=0.18
+
+# HTML parsing (used by ePub parser)
+beautifulsoup4>=4.12
+
+# PDF reading
+PyPDF2>=3.0
+
+# YAML config
+PyYAML>=6.0
