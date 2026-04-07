@@ -30,6 +30,9 @@ def _scan_rules(chunk: Chunk, dictionary: Dict[str, str]) -> Dict[str, str]:
 
     Matching is case-insensitive and whole-word-boundary aware.
     """
+    if not dictionary:
+        return {}
+
     combined_text = " ".join(p.text for p in chunk.paragraphs)
     matched: Dict[str, str] = {}
     for term, translation in dictionary.items():

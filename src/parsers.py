@@ -28,7 +28,7 @@ from src.models import Paragraph
 
 def _require(package: str, install_hint: str) -> None:
     """Abort with a helpful message if *package* is missing."""
-    import importlib
+    import importlib.util
 
     if importlib.util.find_spec(package) is None:
         sys.exit(f"Missing dependency '{package}'. Install with: {install_hint}")

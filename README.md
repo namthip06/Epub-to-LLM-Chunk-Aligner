@@ -47,7 +47,7 @@ This creates the following directory scaffold:
 Extract text from your document. The chunker logically groups paragraphs within a safe character limit (default 5,000 characters) without cutting a paragraph in half. It injects terminology rules specifically needed for each chunk.
 
 ```bash
-python main.py extract /path/to/my-book.epub ./my-book-project --limit 5000
+python main.py extract /path/to/book.epub ./my-book-project --limit 5000
 ```
 
 * This will output numbered text files (e.g., `001.txt`, `002.txt`) in your `./my-book-project/chunks/` directory.
