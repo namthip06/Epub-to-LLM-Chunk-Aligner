@@ -152,12 +152,13 @@ def _build_epub(
             file_name=f"{chapter_id}.xhtml",
             lang="en",
         )
-        chapter.content = (
-            f"<?xml version='1.0' encoding='utf-8'?>"
-            f"<html xmlns='http://www.w3.org/1999/xhtml'>"
-            f"<head><link rel='stylesheet' href='style/main.css'/></head>"
-            f"<body>{html_body}</body></html>"
+        content_str = (
+            f"<?xml version='1.0' encoding='utf-8'?>\n"
+            f"<html xmlns='http://www.w3.org/1999/xhtml'>\n"
+            f"<head><link rel='stylesheet' href='style/main.css'/></head>\n"
+            f"<body>\n{html_body}\n</body>\n</html>"
         )
+        chapter.content = content_str.encode('utf-8')
         chapter.add_item(css_item)
         book.add_item(chapter)
         spine.append(chapter)

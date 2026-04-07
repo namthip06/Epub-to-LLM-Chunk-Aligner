@@ -1,4 +1,4 @@
-# Bilingual Book Translator CLI
+# Epub to LLM Chunk Aligner
 
 A command-line tool to assist in translating books and documents by dividing the content into manageable chunks for AI/LLM translation, and then automatically reassembling the results into a structured, bilingual ePub file (paragraph-by-paragraph).
 
